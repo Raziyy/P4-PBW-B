@@ -1,66 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PRAKTIKUM PBW Pertemuan 4
+Nama : Raziy Ibrahim - 4523210138
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Langkah - Langkah Praktikum
 
-## About Laravel
+Mari kita instal dan konfigurasikan Breeze ke dalam proyek "LaraPress".
+1. Buka Terminal: Masuk ke direktori proyek LaraPress Anda.
+2. Instalasi Breeze via Composer: Perintah ini akan mengunduh paket Breeze dan
+dependensinya.
+composer require laravel/breeze --dev
+3. Jalankan Perintah Instalasi Breeze: Perintah ini akan mempublikasikan semua file
+yang dibutuhkan (Controllers, Views, Routes) ke dalam aplikasi Anda.
+php artisan breeze:install
+○ Anda akan diberi beberapa pilihan. Pilih 0 untuk Blade with Alpine. Tekan Enter.
+○ Pilih no untuk Dark mode support. Tekan Enter.
+○ Pilih testing framework pilihan Anda (pilih 0 untuk Pest jika ragu). Tekan Enter.
+4. Instalasi Dependensi Frontend: Breeze menggunakan Tailwind CSS. Perintah ini akan
+menginstal dependensi JavaScript dari file package.json.
+npm install
+5. Kompilasi Aset: Perintah ini akan meng-compile file CSS dan JS agar bisa digunakan
+oleh browser.
+npm run dev
+6. Jalankan Migrasi: Breeze perlu menambahkan kolom remember_token ke tabel users
+dan membuat tabel password_reset_tokens.
+php artisan migrate
+7. Uji Coba: Jalankan server Anda (php artisan serve). Buka aplikasi di browser. Anda
+sekarang akan melihat link "Log in" dan "Register" di pojok kanan atas. Coba buat
+akun baru dan login!
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Screenshoot Hasil Command & Hasil
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Command
+<img width="1432" height="576" alt="image" src="https://github.com/user-attachments/assets/3d09660f-771c-4032-b2c4-e01427b3cac0" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<img width="1269" height="652" alt="image" src="https://github.com/user-attachments/assets/d4cdc7ec-895c-469f-9522-b1d2738a9a17" />
 
-## Learning Laravel
+<img width="501" height="442" alt="image" src="https://github.com/user-attachments/assets/0a08d7ed-97f5-4945-97ae-ad14d28808d6" />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Hasil Praktikum
+<img width="1920" height="996" alt="image" src="https://github.com/user-attachments/assets/ce7fc535-d848-4b63-9852-ba0142a3d553" />
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Kesimpulan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
+Pada pertemuan ini, kita telah berhasil menambahkan sistem autentikasi yang lengkap dan
+aman ke dalam aplikasi "LaraPress". Kita tidak hanya belajar cara menginstal Laravel Breeze,
+tetapi juga memahami konsep fundamental di baliknya. Kini aplikasi kita siap untuk fitur
+selanjutnya: Otorisasi, di mana kita akan mengatur hak akses spesifik untuk setiap pengguna.
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
