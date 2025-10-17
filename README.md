@@ -48,4 +48,3 @@ aman ke dalam aplikasi "LaraPress". Kita tidak hanya belajar cara menginstal Lar
 tetapi juga memahami konsep fundamental di baliknya. Kini aplikasi kita siap untuk fitur
 selanjutnya: Otorisasi, di mana kita akan mengatur hak akses spesifik untuk setiap pengguna.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
